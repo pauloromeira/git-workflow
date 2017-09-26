@@ -1,0 +1,59 @@
+1. Criação
+  a. Task
+    git checkout master
+    git pull origin master
+    git checkout -b <type>/<TASK-ID> (e.g. git checkout feature/LEGYS-1500)
+    <criação do esqueleto da spider e adição no settings.py. Obs: pode-se usar o make>
+    git add .
+    git commit -m "[<type>/<TASK-ID>] Cria arquivos inciais da spider"
+    git push origin <type>/<TASK-ID>
+
+  b. Subtask
+    git fetch origin <type>/<TASK-ID>
+    git checkout <type>/<TASK-ID>
+    git checkout -b <type>/<SUBTASK-ID> (e.g. git checkout feature/LEGYS-1501)
+    <criação das stubs e/ou testes unitários>
+    git add .
+    git commit -m "[<type>/<SUBTASK-ID>] Cria arquivos inciais da <consulta/extração/...>"
+    git push origin <type>/<SUBTASK-ID>
+
+2. Atualização
+  a. Subtask
+    <se possui arquivos que foram modificados, dar stash ou criar um novo commit>
+      <git stash>
+      <git commit -m "..."
+    git push origin <type>/<SUBTASK-ID>
+
+  b. Task
+    git checkout <type>/<TASK-ID>
+    git pull origin <type>/<TASK-ID>
+
+    git checkout <type>/<SUBTASK-ID>
+    git rebase <type>/<TASK-ID>
+    <podem existir conflitos. após resolvê-los: git rebase --continue. o rebase
+    pode exigir mais de uma resolução de conflitos, portanto a última ação deve
+    ser repetida até que o rebase seja concluído>
+
+    git push -f origin <type>/<SUBTASK-ID>
+    git checkout <type>/<TASK-ID>
+    git merge -
+    git push origin <type>/<TASK-ID>
+
+
+3. Pull Request
+  a. Review
+    - Atualizar a task com todas as subtasks
+    - Dar pull request na branch da task
+  b. Merge
+    Após o review e devidas correções:
+    Sem conflitos: o revisor dá merge com a master e exclui a branch da task.
+    Conflitos: 
+      1. quem fez a atividade deve dar merge com a master:
+        git checkout master
+        git pull origin master
+        git checkout <type>/<TASK-ID>
+        git merge master
+        <resolver conflitos>
+        git push origin <type>/<TASK-ID>
+        <avisar ao revisor>
+      2. O revisor deve então mergear a master com a branch da Task.
