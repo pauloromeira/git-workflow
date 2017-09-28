@@ -39,6 +39,11 @@
     git merge -
     git push origin <type>/<TASK-ID>
 
+  c. Master -> Task
+    git stash
+    git checkout <type>/<TASK-ID>
+    git merge master
+
 
 3. Pull Request
   a. Review
