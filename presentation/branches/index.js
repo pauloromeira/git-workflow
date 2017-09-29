@@ -13,7 +13,7 @@ var graphTemplate = new GitGraph.Template({
       size: 10
     },
     message: {
-      font: "normal 14pt Arial"
+      display: false,
     },
   }
 })

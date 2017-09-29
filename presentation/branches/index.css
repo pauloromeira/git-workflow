@@ -1,5 +1,17 @@
+body {
+  background-color: #2d3b46;
+}
+
 .reveal p {
   margin: 0;
   text-align: left;
   padding-left: 50px;
 }
+
+.reveal pre {
+  margin: auto;
+}
+.reveal pre code {
+  background-color: #000;
+}
+
