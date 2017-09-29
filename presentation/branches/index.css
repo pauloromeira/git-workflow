@@ -9,9 +9,12 @@ body {
 }
 
 .reveal pre {
-  margin: auto;
+  /* margin: auto; */
+  width: 100%;
 }
 .reveal pre code {
   background-color: #000;
+  padding-left: 10px;
+  font-size: 80%;
 }
 

@@ -36,16 +36,15 @@
             <div>
               <!-- ate dez linhas -->
               <pre><code class="bash" data-noescape>
-  git checkout master # Comentário
+  # 1. Criação da branch da Task a partir da master atualizada
+  git checkout master
   git pull origin master
-  git checkout master # Comentário
-  git pull origin master
-  git checkout master # Comentário
-  git pull origin master
-  git checkout master # Comentário
-  git pull origin master
-  git pull origin master
-  git pull origin master
+  git checkout -b feature/LEGYS-1500 # Cria branch da Task
+
+  # 2. Criação do esqueleto da spider e atualização das settings.py
+  git add . # Adiciona arquivos 
+  git commit -m "[feature/LEGYS-1500] Cria arquivos inciais da spider"
+  git push origin feature/LEGYS-1500
               </code></pre>
             </div>
 
