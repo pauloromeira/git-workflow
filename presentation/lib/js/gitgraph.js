@@ -24,7 +24,7 @@
     // Options
     options = _isObject(options) ? options : {};
     this.elementId = (typeof options.elementId === "string") ? options.elementId : "gitGraph";
-    this.author = (typeof options.author === "string") ? options.author : "Sergio Flores <saxo-guy@epic.com>";
+    this.author = (typeof options.author === "string") ? options.author : "Paulo Romeira <paulo@pauloromeira.com>";
     this.reverseArrow = _booleanOptionOr(options.reverseArrow, false);
 
     // Template management
@@ -259,7 +259,7 @@
       x: Math.abs((this.columnMax + 1) * this.template.branch.spacingX) +
       Math.abs(this.commitOffsetX) +
       this.marginX * 2,
-      y: Math.abs((this.columnMax + 1) * this.template.branch.spacingY) +
+      y: Math.abs((this.columnMax - 1) * this.template.branch.spacingY) +
       Math.abs(this.commitOffsetY) +
       this.marginY * 2
     };

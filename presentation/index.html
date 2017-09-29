@@ -7,12 +7,13 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<link rel="stylesheet" href="lib/css/gitgraph.css">
+		<link rel="stylesheet" href="branches/index.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -27,15 +28,17 @@
 		<div class="reveal">
 			<div class="slides">
         <section>
-          Criação
+          <h3>Criação</h3>
           <div>
             <canvas id="gitGraph1"></canvas>
           </div>
-
-            <pre><code class="bash" data-noescape>
-      git checkout master
-      git pull origin master
-            </code></pre>
+          <p>Descrição</p>
+            <div>
+              <pre><code class="bash" data-noescape>
+  git checkout master # Comentário
+  git pull origin master
+              </code></pre>
+            </div>
 
         </section>
 

@@ -16,8 +16,13 @@ develop.commit({
   dotStrokeWidth: 10,
   tag: "feature/LEGYS-500",
 });
-master.commit().commit(); 
+master.commit(); 
 master.commit({tag: "master"});
+
+var hello = develop.branch("hello"); 
+hello.commit().commit({tag: "hello"})
+var hello2 = hello.branch("hello2"); 
+hello2.commit().commit({tag: "hello2"})
 
 var gitGraph2 = new GitGraph({
   template: "metro",
@@ -31,3 +36,4 @@ master.commit();
 var develop = master.branch("develop"); 
 develop.commit().commit();
 master.commit(); 
+
