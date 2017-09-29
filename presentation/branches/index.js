@@ -40,7 +40,7 @@ master.commit("Initial commit").commit(whiteCommit);
 
 
 var task = master.branch("feature/LEGYS-500"); 
-task.commit().commit(whiteCommit);
+task.commit().commit();
 
 master.commit()
 
