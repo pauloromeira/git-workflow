@@ -21,7 +21,7 @@ master.commit({tag: "master"});
 
 var hello = develop.branch("hello"); 
 hello.commit().commit({tag: "hello"})
-var hello2 = hello.branch("hello2"); 
+var hello2 = develop.branch("hello2"); 
 hello2.commit().commit({tag: "hello2"})
 
 var gitGraph2 = new GitGraph({
