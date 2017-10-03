@@ -28,11 +28,16 @@
 		<div class="reveal">
 			<div class="slides">
         <section>
-          <h3>Criação da Task</h3>
-          <div>
-            <canvas id="criacao-task"></canvas>
-          </div>
-          <!-- <p>Descrição</p> -->
+          <section>
+            <h2>Criação</h2> 
+            <canvas id="criacao"></canvas>
+          </section>
+          <section>
+            <h3>Criação da Task</h3>
+            <div>
+              <canvas id="criacao-task"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
             <div>
               <!-- ate dez linhas -->
               <pre><code class="bash" data-noescape>
@@ -49,14 +54,14 @@
               </code></pre>
             </div>
 
-        </section>
+          </section>
 
-        <section>
-          <h3>Criação da(s) Subtask(s)</h3>
-          <div>
-            <canvas id="criacao-subtask"></canvas>
-          </div>
-          <!-- <p>Descrição</p> -->
+          <section>
+            <h3>Criação das Subtasks</h3>
+            <div>
+              <canvas id="criacao-subtask1"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
             <div>
               <!-- ate dez linhas -->
               <pre><code class="bash" data-noescape>
@@ -70,9 +75,56 @@
   git commit -m "[feature/LEGYS-1501] Cria arquivos inciais da consulta"
   git push origin feature/LEGYS-1501 # Atualiza o Github
               </code></pre>
-              <h5>teste</h5>
             </div>
 
+          </section>
+          <section>
+            <h3>Criação das Subtasks</h3>
+            <div>
+              <canvas id="criacao-subtask2"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
+            <div>
+              <!-- ate dez linhas -->
+              <pre><code class="bash" data-noescape>
+  # 1. Criação da branch da Subtask a partir da Task atualizada
+  git fetch origin feature/LEGYS-1500
+  git checkout feature/LEGYS-1500
+  git checkout -b feature/LEGYS-1502 # Cria branch da Task
+
+  # 2. Criação das stubs e/ou testes unitários
+  git add . # Adiciona arquivos criados / modificados
+  git commit -m "[feature/LEGYS-1502] Cria arquivos inciais da consulta"
+  git push origin feature/LEGYS-1502 # Atualiza o Github
+              </code></pre>
+            </div>
+
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Atualização da Task</h3>
+            <div>
+              <canvas id="atualizacao-task"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
+            <div>
+              <!-- ate dez linhas -->
+              <pre><code class="bash" data-noescape>
+  # 1. Criação da branch da Subtask a partir da Task atualizada
+  git fetch origin feature/LEGYS-1500
+  git checkout feature/LEGYS-1500
+  git checkout -b feature/LEGYS-1501 # Cria branch da Task
+
+  # 2. Criação das stubs e/ou testes unitários
+  git add . # Adiciona arquivos criados / modificados
+  git commit -m "[feature/LEGYS-1501] Cria arquivos inciais da consulta"
+  git push origin feature/LEGYS-1501 # Atualiza o Github
+              </code></pre>
+            </div>
+            
+          </section>
+          
         </section>
 
 			</div>
@@ -83,8 +135,11 @@
 
     <script src="lib/js/gitgraph.js"></script>
     <script src="branches/all.js"></script>
+    <script src="branches/criacao.js"></script>
     <script src="branches/criacao-task.js"></script>
-    <script src="branches/criacao-subtask.js"></script>
+    <script src="branches/criacao-subtask1.js"></script>
+    <script src="branches/criacao-subtask2.js"></script>
+    <script src="branches/atualizacao-task.js"></script>
 
 		<script>
 			// More info about config & dependencies:

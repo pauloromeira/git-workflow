@@ -2,7 +2,7 @@ var config = {
   template: graphTemplate,
   mode: "compact",
   orientation: "horizontal",
-  elementId: "criacao-subtask",
+  elementId: "criacao",
 };
 
 var gitgraph = new GitGraph(config);
