@@ -26,6 +26,7 @@
 	</head>
 	<body>
 		<div class="reveal">
+
 			<div class="slides">
         <section>
           <section>
@@ -103,6 +104,11 @@
         </section>
         <section>
           <section>
+            <h2>Atualização</h2> 
+            <canvas id="atualizacao"></canvas>
+          </section>
+
+          <section>
             <h3>Atualização da Task</h3>
             <div>
               <canvas id="atualizacao-task"></canvas>
@@ -111,21 +117,65 @@
             <div>
               <!-- ate dez linhas -->
               <pre><code class="bash" data-noescape>
-  # 1. Criação da branch da Subtask a partir da Task atualizada
-  git fetch origin feature/LEGYS-1500
+  # 1. Atualização da Task com Github
   git checkout feature/LEGYS-1500
-  git checkout -b feature/LEGYS-1501 # Cria branch da Task
+  git pull origin feature/LEGYS-1500
 
-  # 2. Criação das stubs e/ou testes unitários
-  git add . # Adiciona arquivos criados / modificados
-  git commit -m "[feature/LEGYS-1501] Cria arquivos inciais da consulta"
-  git push origin feature/LEGYS-1501 # Atualiza o Github
+  # 1. Atualização da Task com a Subtask
+  git merge --no-ff feature/LEGYS-1501
+  git push origin feature/LEGYS-1500 # Atualiza o Github
               </code></pre>
             </div>
             
           </section>
-          
+
+
+          <section>
+            <h3>Atualização da Subtask</h3>
+            <div>
+              <canvas id="atualizacao-subtask"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
+            <div>
+              <!-- ate dez linhas -->
+              <pre><code class="bash" data-noescape>
+  # 1. Atualização da Task com Github
+  git checkout feature/LEGYS-1500
+  git pull origin feature/LEGYS-1500
+
+  # 1. Atualização da Subtask com a Task
+  git checkout feature/LEGYS-1502
+  git merge --no-ff feature/LEGYS-1500
+  git push origin feature/LEGYS-1502 # Atualiza o Github
+              </code></pre>
+            </div>
+            
+          </section>
+
         </section>
+
+          <section>
+            <section>
+              <h2>Preparando para o Pull Request</h2>
+              <canvas id="pull-request"></canvas>
+            </section>
+
+            <section>
+            <h3>Atualização da Task &lt; Subtasks</h3>
+            <div>
+              <canvas id="pull-subtasks"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
+            <div>
+              <!-- ate dez linhas -->
+              <pre><code class="bash" data-noescape>
+  # A Task deve estar atualizada com as modificações das Subtasks
+              </code></pre>
+            </div>
+            
+          </section>           
+
+          </section>
 
 			</div>
 		</div>
@@ -139,7 +189,12 @@
     <script src="branches/criacao-task.js"></script>
     <script src="branches/criacao-subtask1.js"></script>
     <script src="branches/criacao-subtask2.js"></script>
+    <script src="branches/atualizacao.js"></script>
     <script src="branches/atualizacao-task.js"></script>
+    <script src="branches/atualizacao-subtask.js"></script>
+    <script src="branches/pull-request.js"></script>
+    <script src="branches/pull-subtasks.js"></script>
+    <script src="branches/pull-master.js"></script>
 
 		<script>
 			// More info about config & dependencies:
