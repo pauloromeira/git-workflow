@@ -95,7 +95,7 @@
 
   # 2. Criação das stubs e/ou testes unitários
   git add . # Adiciona arquivos criados / modificados
-  git commit -m "[feature/LEGYS-1502] Cria arquivos inciais da consulta"
+  git commit -m "[feature/LEGYS-1502] Cria arquivos inciais da extração"
   git push origin feature/LEGYS-1502 # Atualiza o Github
               </code></pre>
             </div>
@@ -156,7 +156,7 @@
 
           <section>
             <section>
-              <h2>Preparando para o Pull Request</h2>
+              <h2>Preparando Pull Request</h2>
               <canvas id="pull-request"></canvas>
             </section>
 
@@ -172,8 +172,34 @@
   # A Task deve estar atualizada com as modificações das Subtasks
               </code></pre>
             </div>
-            
-          </section>           
+            </section>           
+
+            <section>
+            <h3>Atualização da Task &lt; master</h3>
+            <div>
+              <canvas id="pull-master"></canvas>
+            </div>
+            <!-- <p>Descrição</p> -->
+            <div>
+              <!-- ate dez linhas -->
+              <pre><code class="bash" data-noescape>
+  # Atualização da master com Github
+  git checkout master
+  git pull origin master
+
+  # Atualização da Task com os últimos commits da master
+  git checkout feature/LEGYS-1500
+  git merge --no-ff master
+
+  # Observações: 
+  # 1. Podem surgir conflitos nos merges a serem resolvidos.
+  # 2. É importante testar após os merges.
+  # 3. É interessante atualizar a branch derivada antes da originária,
+  #    testá-la, e depois atualizar a originária.
+              </code></pre>
+            </div>
+            </section>           
+
 
           </section>
 
